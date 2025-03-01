@@ -97,7 +97,7 @@ const Dashboard = () => {
       }
 
       await axios.delete(
-        `http://localhost:5000/api/v1/notes/${noteToDelete._id}`,
+        `https://notes-app-backend-1-wic7.onrender.com/api/v1/notes/${noteToDelete._id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
