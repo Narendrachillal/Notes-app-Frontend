@@ -23,8 +23,8 @@ const Signup = () => {
     setLoading(true);
     try {
       await axios.post("https://notes-app-backend-1-wic7.onrender.com/api/v1/auth/register", user);
-      alert("Signup successful! Please login.");
-      navigate("/login");
+      alert("Signup successful!...");
+      navigate("/");
     } catch (error) {
       alert("Signup failed! " + error.response?.data?.message || "Try again.");
     }
