@@ -28,7 +28,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
+        "https://notes-app-backend-1-wic7.onrender.com/api/v1/auth/login",
         {
           email,
           password,
