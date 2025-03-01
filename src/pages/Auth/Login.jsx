@@ -35,14 +35,13 @@ const Login = () => {
         }
       );
 
-      console.log("Login Response:", response.data); // ✅ Debug API response
+  
 
       const token = response.data?.token || response.data?.payload?.at;
 
       if (token) {
-        localStorage.setItem("token", token); // ✅ Store token in localStorage
-        console.log("Token stored in localStorage:", token);
-        navigate("/"); // ✅ Redirect to Dashboard
+        localStorage.setItem("token", token); //  Store token in localStorage
+        navigate("/"); //  Redirect to Dashboard
       } else {
         console.error("No token received from API");
       }
