@@ -22,7 +22,7 @@ const Signup = () => {
   const handleSignup = async () => {
     setLoading(true);
     try {
-      await axios.post("https://notes-app-backend-1-wic7.onrender.com", user);
+      await axios.post("https://notes-app-backend-1-wic7.onrender.com/api/v1/register", user);
       alert("Signup successful! Please login.");
       navigate("/login");
     } catch (error) {
