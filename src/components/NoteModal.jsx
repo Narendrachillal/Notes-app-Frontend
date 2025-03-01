@@ -36,13 +36,13 @@ const NoteModal = ({ open, handleClose, refreshNotes, noteToEdit }) => {
       if (noteToEdit) {
         // ✅ Update existing note
         await axios.put(
-          `http://localhost:5000/api/v1/notes/${noteToEdit._id}`,
+          `https://notes-app-backend-1-wic7.onrender.com/api/v1/notes/${noteToEdit._id}`,
           note,
           { headers }
         );
       } else {
         // ✅ Add new note
-        await axios.post("http://localhost:5000/api/v1/notes/", note, {
+        await axios.post("https://notes-app-backend-1-wic7.onrender.com/api/v1/notes/", note, {
           headers,
         });
       }
