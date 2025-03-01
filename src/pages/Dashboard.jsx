@@ -37,7 +37,7 @@ const Dashboard = () => {
         handleLogout();
         return;
       }
-      const response = await axios.get("https://notes-app-backend-1-wic7.onrender.com"+"api/v1/notes", {
+      const response = await axios.get("https://notes-app-backend-1-wic7.onrender.com/api/v1/notes", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setNotes(response?.data?.payload);
